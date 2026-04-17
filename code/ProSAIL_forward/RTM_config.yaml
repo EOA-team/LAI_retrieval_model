@@ -1,0 +1,19 @@
+LUT: 
+    lut_params: 'lut_params/prosail_danner-etal_bulgaria_soil.csv'
+    lut_size : 10000
+    sampling_method: 'FRS'
+    apply_glai_ccc_constraint: false
+    apply_chlorophyll_carotiniod_constraint: false
+    codistribution: 'lut_params/codistribution_snap.csv' #'lut_params/codistribution_adapted.csv' #
+    
+
+RTM:
+    sensor : 'Sentinel2B'
+    fpath_srf : 'data/S2-SRF_COPE-GSEG-EOPG-TN-15-0007_3.1.xlsx'
+    remove_invalid_green_peaks : true
+    linearize_lai : false
+    
+out_dir : 'results/bulgaria/test' 
+soil_path: '../baresoil/bulgaria_fields/sampled_soil_spectra_bulgaria_12_1nm.pkl' #'../baresoil/sampled_spectra_k5_n1000_uniform_1nm.pkl' #'../baresoil/sampled_soil_spectra_multifield_1nm.pkl' #null 
+traits : ['lai', 'cab', 'ccc', 'car']
+

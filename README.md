@@ -4,7 +4,7 @@
 
 This repository contains the Python code and data required to re-run the analysis and results presented in
 
-> **_PAPER:_**  Ledain S., Gilgen A., Aasen, H. (2026) "Soil-informed PROSAIL modelling improves scalable retrieval of leaf area index: evidence from multi-year, multi-country winter wheat observations". *Under review*.
+> **_PAPER:_**  Ledain S., Gilgen A., Aasen H. (2026) "Soil-informed PROSAIL modelling improves scalable retrieval of leaf area index: evidence from multi-year, multi-country winter wheat observations". *Under review*.
 
 We therefore kindly ask you to **acknowledge our work** by
 
@@ -24,12 +24,12 @@ For access to the data, please contact us.
 ### Code
 
 #### 1. Baresoil spectra representation
-Extract, cluster and sample soil spectra across countries and study fields. 
+Use a bare soil composite (DLR SoilSuite) and extract, cluster and sample soil spectra across countries and study fields. This code creates soil spectra datasets at different scales.
 
 Data inputs: 
 - bare soil spectra collected from DLR SoilSuite
 - CORINE land use classification to identify agricultural areas
-- Field boundaries 
+- Field boundaries (for site/multisite datasets)
 
 Outputs:
 - For each field in each country
@@ -48,7 +48,22 @@ python bare_soil_sites.py # Soil dataset per study site
 
 
 #### 2. Radiative transfer model
+This code allows to run PROSAIL in forward mode. The input parameters are set to the same ranges and distributions as for SNAP LAI (http://step.esa.int/docs/extra/ATBD_S2ToolBox_V2.1.pdf), as well as the parameter codistribution. The runs output Sentinel-2 like relfectances. The background soil used in PROSAIL is modified, using the spectra collected in the sections above.
 
+To generate PROSAIL simulations:
+```
+# In ProSAIL_forward
+python simualte_s2_spectra_soil.py
+```
+A dataframe (row=observation, columns=ProSAIL parameters and S2 bands) is created and saved to `.pkl` file.
+
+The script reads from `ProSAIL_forward/RTM_config.yaml`:
+- parameters passed to PROSAIL in `lut_params`. The parameter settings used in this project are saved in `ProSAIL_forward/lut_params`.
+- Number of simulations in `lut_size` (50k for Sentinel-2A and 50k for Sentinel-2B)d
+- How to codistribute the parameters by passing a file to `codistribution`
+- sensor type in `sensor` (Sentinel-2A or Sentinel-2B)
+- where files are written in `out_dir`
+- soil spectra to use in `soil_path`. Expects a `.pkl` file containing a dataframe where each row is a spectra with 1nm resoltuion (columns should be the bands between 400 and 2100nm). If `None`, the background spectra used are those provided in `ProSAIL_forward/prosail`.
 
 #### 3. LAI retrieval model
 #### 4. Analysis

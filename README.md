@@ -77,6 +77,9 @@ First, configure the model and set up in `configs/config_NN.yaml`:
 - In the `Data` section: path to LUTs for traiing and testing, paths to bare soil samples if needed, relevant columns for train/predict.
 - In the `Tuning` section: define the number of hyperparameter trials (Optuna package used for tuning)
 
+> [!TIP]
+> If no soil data is to be used for the model development, comment out `baresoil_samples` in the config file
+ 
 Tune the model:
 ```
 python tune.py ../configs/config_NN.yaml
@@ -89,13 +92,22 @@ python train.py ../configs/config_NN.yaml
 ```
 The models are saved at the path defined in the config as `{save_path}{seed_nbr}.pkl`. The model results (scores for each seed) as saved in the `score_path` provided in the config file.
 
-
-> [!TIP]
-> If no soil data is to be used for the model development, comment out `baresoil_samples` in the config file
+> [!NOTE]
+> Noise is added to each band using the levels defined in `noise_snap.csv`
  
+
 
 #### 4. Analysis
 
+Compute SNAP on validation data
+```
+python snap_baseline.py
+```
+
+Script used to compare models and generate plots
+```
+python compare_models.py
+```
 
 ### Data
 

@@ -1,0 +1,24 @@
+35 Trial 6 finished with value: 0.7604079461246724 and parameters: {'batch_
+size': 32, 'hidden_size': 32, 'optim': 'Adam', 'lr': 0.005447839150698351, 'lr_scheduler': 'ReduceLR
+OnPlateau'}. Best is trial 6 with value: 0.7604079461246724. 
+Altkloster Trial 7 finished with value: 0.7527764646411785 and parameters: {'batch_size': 16, 'hidden_size': 48, 'optim': 'SGD', 'lr': 0.006182904094660724, 'lr_scheduler': 'ReduceLROnPlateau', 'momentum': 0.8423815074384626}. Best is trial 7 with value: 0.7527764646411785.
+Bramenwies Trial 4 finished with value: 0.7506426862482618 and parameters: {'batch_size': 64, 'hidde
+n_size': 64, 'optim': 'Adam', 'lr': 0.009795742233076563, 'lr_scheduler': 'ReduceLROnPlateau'}. Best is trial 4 with 
+value: 0.7506426862482618.  
+Broatefaeld Trial 2 finished with value: 0.7797062360623289 and parameters: {'batch_size': 16, 'hidde
+n_size': 48, 'optim': 'SGD', 'lr': 0.002162599089808296, 'lr_scheduler': 'CosineAnnealingLR', 'momentum': 0.835330525
+8489965}. Best is trial 2 with value: 0.7797062360623289.
+Fluegenrain Trial 0 finished with value: 0.7465894774498084 and parameters: {'batch_size': 64, 'hidde
+n_size': 48, 'optim': 'Adam', 'lr': 0.008245498169665523, 'lr_scheduler': 'CosineAnnealingLR'}. Best is trial 0 with 
+value: 0.7465894774498084. 
+Grund Trial 5 finished with value: 0.7517732703930211 and parameters: {'batch_size': 64, 'hidde
+n_size': 48, 'optim': 'Adam', 'lr': 0.008960289635113897, 'lr_scheduler': 'ReduceLROnPlateau'}. Best is trial 5 with 
+value: 0.7517732703930211.  
+Hohrueti Trial 8 finished with value: 0.7475208209240457 and parameters: {'batch_size': 16, 'hidden_size': 48, 'optim': 'Adam', 'lr': 0.004471670275108283, 'lr_scheduler': 'CosineAnnealingLR'}. Best is trial 8 with value: 0.7475208209240457.
+Hohrueti2 Trial 7 finished with value: 0.7928274111227877 and parameters: {'batch_size': 16, 'hidden_size': 48, 'optim': 'SGD', 'lr': 0.0006954913217616238, 'lr_scheduler': 'CosineAnnealingLR', 'momentum': 0.9425836018358037}. Best is trial 7 with value: 0.7928274111227877.
+Neuhof3 Trial 3 finished with value: 0.7793583368214971 and parameters: {'batch_size': 64, 'hidden_s
+ize': 32, 'optim': 'Adam', 'lr': 0.007304288735816315, 'lr_scheduler': 'CosineAnnealingLR'}. Best is trial 3 with value:
+ 0.7793583368214971.       
+Ruetteli Trial 3 finished with value: 0.7775725373250547 and parameters: {'batch_si
+ze': 32, 'hidden_size': 48, 'optim': 'Adam', 'lr': 0.004749099535345063, 'lr_scheduler': 'ReduceLROnPl
+ateau'}. Best is trial 3 with value: 0.7775725373250547.

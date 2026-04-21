@@ -1,0 +1,30 @@
+1 Trial 6 finished with value: 0.8736065178640684 and parameters: {'batch_
+size': 16, 'hidden_size': 32, 'optim': 'Adam', 'lr': 0.002393589974478, 'lr_scheduler': 'ReduceLROnP
+lateau'}. Best is trial 6 with value: 0.8736065178640684. 
+2 Trial 8 finished with value: 0.8256843319851356 and parameters: {'batch_size': 64, 'hidden_size': 64, 'optim': 'Adam', 'lr': 0.008371734454539875, 'lr_scheduler': 'ReduceLROnPlateau'}. Best is trial 8 with value: 0.8256843319851356.
+4 Trial 3 finished with value: 0.8468349016432521 and parameters: {'batch_
+size': 16, 'hidden_size': 64, 'optim': 'SGD', 'lr': 0.0003191027132521384, 'lr_scheduler': 'ReduceLR
+OnPlateau', 'momentum': 0.9604427905203639}. Best is trial 3 with value: 0.8468349016432521. 
+5 Trial 1 finished with value: 0.8377027147153786 and parameters: {'batch_
+size': 16, 'hidden_size': 48, 'optim': 'SGD', 'lr': 0.0014137133973227156, 'lr_scheduler': 'ReduceLR
+OnPlateau', 'momentum': 0.9811564684408642}. Best is trial 1 with value: 0.8377027147153786.        
+6 rial 9 finished with value: 0.8852994974065519 and parameters: {'batch_size': 16, 'hidden_size': 64, 'optim': 'Adam', 'lr': 0.0010885491022837406, 'lr_scheduler': 'CosineAnnealingLR'}. Best is trial 9 with value: 0.8852994974065519.
+7 Trial 5 finished with value: 0.8566995956548098 and parameters: {'batch_
+size': 16, 'hidden_size': 32, 'optim': 'SGD', 'lr': 0.006476897309729604, 'lr_scheduler': 'ReduceLRO
+nPlateau', 'momentum': 0.8347961207198811}. Best is trial 5 with value: 0.8566995956548098.         
+Tuning results saved in tuning_results/bulgaria_fields/NN_BG_soil_7_tuning.xlsx    
+8 Trial 4 finished with value: 0.8544417105752864 and parameters: {'batch_
+size': 16, 'hidden_size': 32, 'optim': 'SGD', 'lr': 0.00838543906625373, 'lr_scheduler': 'CosineAnne
+alingLR', 'momentum': 0.5958230827582209}. Best is trial 4 with value: 0.8544417105752864.
+9 Trial 7 finished with value: 0.8593368061799828 and parameters: {'batch_size': 64, 'hidden_size': 48, 'optim': 'Adam', 'l
+size': 64, 'hidden_size': 48, 'optim': 'Adam', 'lr': 0.004919179342373405, 'lr_scheduler': 'ReduceLR8061799828.
+OnPlateau'}. Best is trial 7 with value: 0.8593368061799828.  
+10 Trial 2 finished with value: 0.8547769801237276 and parameters: {'batch_size': 32, 'hidde
+n_size': 48, 'optim': 'Adam', 'lr': 0.0058979394889009775, 'lr_scheduler': 'CosineAnnealingLR'}. Best is trial 2 with
+ value: 0.8547769801237276.  
+11 Trial 4 finished with value: 0.8445955437389377 and parameters: {'batch_size': 16, 'hidde
+n_size': 48, 'optim': 'SGD', 'lr': 0.008358770793674994, 'lr_scheduler': 'CosineAnnealingLR', 'momentum': 0.667340759
+7306572}. Best is trial 4 with value: 0.8445955437389377.      
+12 Trial 5 finished with value: 0.825925726790134 and parameters: {'batch_size': 32, 'hidden
+_size': 64, 'optim': 'Adam', 'lr': 0.00449120182165454, 'lr_scheduler': 'CosineAnnealingLR'}. Best is trial 5 with va
+lue: 0.825925726790134.

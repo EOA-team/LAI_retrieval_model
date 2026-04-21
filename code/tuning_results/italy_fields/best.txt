@@ -1,0 +1,16 @@
+3 Trial 6 finished with value: 0.8364251710720504 and parameters: {'batch_size': 32, 'hidde
+n_size': 32, 'optim': 'SGD', 'lr': 0.004248905730047922, 'lr_scheduler': 'CosineAnnealingLR', 'momentum': 0.955409628
+2051123}. Best is trial 6 with value: 0.8364251710720504.
+4 Trial 2 finished with value: 0.8561208032029519 and parameters: {'batch_size': 64, 'hidde
+n_size': 64, 'optim': 'Adam', 'lr': 0.009250450114992283, 'lr_scheduler': 'CosineAnnealingLR'}. Best is trial 2 with 
+value: 0.8561208032029519.  
+5 Trial 5 finished with value: 0.8338555740255542 and parameters: {'batch_size': 64, 'hidde
+n_size': 48, 'optim': 'SGD', 'lr': 0.002433616782163769, 'lr_scheduler': 'ReduceLROnPlateau', 'momentum': 0.979172187
+4078565}. Best is trial 5 with value: 0.8338555740255542.  
+6 Trial 0 finished with value: 0.8381029362954802 and parameters: {'batch_size': 16, 'hidde
+n_size': 32, 'optim': 'Adam', 'lr': 0.0062578653671458125, 'lr_scheduler': 'ReduceLROnPlateau'}. Best is trial 0 with
+ value: 0.8381029362954802.
+7 Trial 8 finished with value: 0.8613789706108325 and parameters: {'batch_size': 16, 'hidden_size': 48, 'optim': 'SGD', 'lr': 0.0014863491955968355, 'lr_scheduler': 'CosineAnnealingLR', 'momentum': 0.9724927554810996}. Best is trial 8 with value: 0.8613789706108325.
+8 Trial 0 finished with value: 0.8611977212786355 and parameters: {'batch_size': 32, 'hidde
+n_size': 64, 'optim': 'Adam', 'lr': 0.009265198176386946, 'lr_scheduler': 'ReduceLROnPlateau'}. Best is trial 0 with 
+value: 0.8611977212786355. 

@@ -1,0 +1,7 @@
+europe Trial 5 finished with value: 0.8712492352431385 and parameters: {'batch_size': 
+64, 'hidden_size': 48, 'optim': 'Adam', 'lr': 0.006932980556058734, 'lr_scheduler': 'ReduceLROnPlateau'}. B
+est is trial 5 with value: 0.8712492352431385. 
+nosoil Tial 8 finished with value: 0.9961831001131694 and parameters: {'batch_size': 32, 'hidden_size': 32, 'optim': 'SGD', 'lr': 0.0011230886950773598, 'lr_scheduler': 'ReduceLROnPlateau', 'momentum': 0.8431637320901755}. Best is trial 8 with value: 0.9961831001131694.
+multifield Trial 3 finished with value: 0.8795138191226 and parameters: {'batch_size': 64,
+ 'hidden_size': 32, 'optim': 'Adam', 'lr': 0.009212904513545912, 'lr_scheduler': 'ReduceLROnPlateau'}. Best
+ is trial 3 with value: 0.8795138191226

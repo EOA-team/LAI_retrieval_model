@@ -15,15 +15,11 @@ This helps us to continue the labor and cost-intensive process of data acquisiti
 
 If your work relies substantially on our data please also [get in touch with us](https://www.eoa-team.net/) and consider offering co-authorship.
 
+For access to the data, please contact us
 
-## Content
+## Code
 
-### Data
-For access to the data, please contact us.
-
-### Code
-
-#### 1. Baresoil spectra representation
+### 1. Baresoil spectra representation
 Use a bare soil composite (DLR SoilSuite) and extract, cluster and sample soil spectra across countries and study fields. This code creates soil spectra datasets at different scales.
 
 Data inputs: 
@@ -47,7 +43,7 @@ python bare_soil_sites.py # Soil dataset per study site
 ```
 
 
-#### 2. Radiative transfer model
+### 2. Radiative transfer model
 This code allows to run PROSAIL in forward mode. The input parameters are set to the same ranges and distributions as for SNAP LAI (http://step.esa.int/docs/extra/ATBD_S2ToolBox_V2.1.pdf), as well as the parameter codistribution. The runs output Sentinel-2 like relfectances. The background soil used in PROSAIL is modified, using the spectra collected in the sections above.
 
 To generate PROSAIL simulations:
@@ -69,7 +65,7 @@ The script reads from `ProSAIL_forward/RTM_config.yaml`:
 > Edit the name of the output file (look-up table saved as a pickled dataframe), edit the `fpath_lut` variable in the `generate_spectra_soil` function (or `generate_spectra` if no soil data is passed)
 
 
-#### 3. LAI retrieval model
+### 3. LAI retrieval model
 Once the look-up tables are generated with PROSAIL, they can be used to train neural network-based LAI retrieval models. An ensemble of 5 neural network with different seeds are trained, and results are always the average of predictions.
 
 First, configure the model and set up in `configs/config_NN.yaml`:
@@ -97,7 +93,7 @@ The models are saved at the path defined in the config as `{save_path}{seed_nbr}
  
 
 
-#### 4. Analysis
+### 4. Analysis
 
 Compute SNAP on validation data
 ```
@@ -108,7 +104,3 @@ Script used to compare models and generate plots
 ```
 python compare_models.py
 ```
-
-### Data
-
-### Results

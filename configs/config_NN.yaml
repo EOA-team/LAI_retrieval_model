@@ -1,0 +1,39 @@
+Model: 
+    name : "NN"
+    input_size: 10
+    hidden_size: 48
+    hidden_layer: 1
+    output_size: 1
+    epochs: 1
+    batch_size: 32
+    criterion: 'MSE'
+    optim: 
+        name: Adam
+        lr: 0.004749099535345063
+    scheduler:
+        name: ReduceLROnPlateau
+    #    step_size: 20
+    #    gamma: 0.5
+    save: True
+    save_path: '../models/NN_CH_soil_Ruetteli_tuned.pkl'
+    score_path: '../model_results/switzerland_fields/NN_CH_soil_Ruetteli_tuned.xlsx'
+    #val_plot_suffix: ''
+    gpu : False
+    plot: True
+    noise: True
+
+Tuning:
+    n_trials: 10
+
+Seed: [0,1,2,3,4]
+
+Data:
+    data_path : ['ProSAIL_forward/results/switzerland/prosail_danner-etal_switzerland_soil_S2A_Ruetteli_lut.pkl', 'ProSAIL_forward/results/switzerland/prosail_danner-etal_switzerland_soil_S2B_Ruetteli_lut.pkl']
+    test_data_path : ['ProSAIL_forward/results/switzerland/test/prosail_danner-etal_switzerland_soil_S2A_Ruetteli_lut.pkl', 'ProSAIL_forward/results/switzerland/test/prosail_danner-etal_switzerland_soil_S2B_Ruetteli_lut.pkl']
+    baresoil_samples : ['../code/baresoil/switzerland_fields/sampled_soil_spectra_switzerland_Ruetteli.csv']  #['../code/baresoil/sampled_soil_spectra_multifield.csv'] ['../code/baresoil/sampled_soil_spectra_multifield.csv'] # ['../code/baresoil/soil_spectra_k5_n1000_uniform_countries.csv'] #
+    val_data_path : [] 
+    train_cols : ['B02', 'B03', 'B04', 'B05', 'B06', 'B07', 'B08', 'B8A', 'B11', 'B12']
+    target_col : 'lai'   
+    normalize: True
+
+#['../data/insitu_S2/s2_val_switzerland.pkl', '../data/insitu_S2/s2_val_bulgaria.pkl', '../data/insitu_S2/bulgaria_fields/s2_val_licor_1_clean.pkl', '../data/insitu_S2/bulgaria_fields/s2_val_licor_1_clean.pkl', '../data/insitu_S2/bulgaria_fields/s2_val_licor_1_clean.pkl', '../data/insitu_S2/bulgaria_fields/s2_val_licor_1_clean.pkl', '../data/insitu_S2/bulgaria_fields/s2_val_licor_1_clean.pkl', '../data/insitu_S2/bulgaria_fields/s2_val_licor_1_clean.pkl', '../data/insitu_S2/bulgaria_fields/s2_val_licor_Ruetteli_clean.pkl', '../data/insitu_S2/bulgaria_fields/s2_val_licor_1_clean.pkl', '../data/insitu_S2/bulgaria_fields/s2_val_licor_1_clean.pkl'] 

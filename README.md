@@ -53,19 +53,47 @@ This code allows to run PROSAIL in forward mode. The input parameters are set to
 To generate PROSAIL simulations:
 ```
 # In ProSAIL_forward
-python simualte_s2_spectra_soil.py
+python simulate_s2_spectra_soil.py
 ```
 A dataframe (row=observation, columns=ProSAIL parameters and S2 bands) is created and saved to `.pkl` file.
 
 The script reads from `ProSAIL_forward/RTM_config.yaml`:
 - parameters passed to PROSAIL in `lut_params`. The parameter settings used in this project are saved in `ProSAIL_forward/lut_params`.
-- Number of simulations in `lut_size` (50k for Sentinel-2A and 50k for Sentinel-2B)d
+- Number of simulations in `lut_size` (50k for Sentinel-2A and 50k for Sentinel-2B, 10k each for test LUTs)
 - How to codistribute the parameters by passing a file to `codistribution`
 - sensor type in `sensor` (Sentinel-2A or Sentinel-2B)
 - where files are written in `out_dir`
 - soil spectra to use in `soil_path`. Expects a `.pkl` file containing a dataframe where each row is a spectra with 1nm resoltuion (columns should be the bands between 400 and 2100nm). If `None`, the background spectra used are those provided in `ProSAIL_forward/prosail`.
 
+> [!NOTE]
+> Edit the name of the output file (look-up table saved as a pickled dataframe), edit the `fpath_lut` variable in the `generate_spectra_soil` function (or `generate_spectra` if no soil data is passed)
+
+
 #### 3. LAI retrieval model
+Once the look-up tables are generated with PROSAIL, they can be used to train neural network-based LAI retrieval models. An ensemble of 5 neural network with different seeds are trained, and results are always the average of predictions.
+
+First, configure the model and set up in `configs/config_NN.yaml`:
+- In the `Model` section: specific model parameters can be passed, as well as where the model and results will be saved.
+- In the `Data` section: path to LUTs for traiing and testing, paths to bare soil samples if needed, relevant columns for train/predict.
+- In the `Tuning` section: define the number of hyperparameter trials (Optuna package used for tuning)
+
+Tune the model:
+```
+python tune.py ../configs/config_NN.yaml
+```
+will use the hyperparameter ranges passed in the `objective` function. The hyperparameter combinations and scores are saved in an excel file in `tuning_results/` as `{model_name}_tuning.xlsx` (model name is based on save path in config file).
+
+Train the model with specific hyperparameters:
+```
+python train.py ../configs/config_NN.yaml
+```
+The models are saved at the path defined in the config as `{save_path}{seed_nbr}.pkl`. The model results (scores for each seed) as saved in the `score_path` provided in the config file.
+
+
+> [!TIP]
+> If no soil data is to be used for the model development, comment out `baresoil_samples` in the config file
+ 
+
 #### 4. Analysis
 
 
